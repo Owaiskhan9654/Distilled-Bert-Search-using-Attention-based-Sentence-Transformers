@@ -6,11 +6,12 @@ from sentence_transformers import SentenceTransformer
 from rank_bm25 import BM25L
 
 def rank(query):
-    PM_Articles = pd.read_csv("data/PM classified data/Final_PM.csv", encoding='latin1')
+    PM_Articles = pd.read_csv("data/PM classified data/Final_PM_Reduced.csv", encoding='latin1')
 
     embedder = SentenceTransformer('distilbert-base-nli-stsb-mean-tokens')
 
     corpus = []
+
     tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 
     #Title = PM_Articles['Title']
@@ -25,7 +26,7 @@ def rank(query):
 
 
 
-    embedding_file = "data/models/PM_Articles_DistilledBert.emb"
+    embedding_file = "data/models/PM_Articles_DistilledBert_reduced.emb"
     with open(embedding_file, mode='rb') as emb_f:
         corpus_embeddings = pickle.load(emb_f)
 
