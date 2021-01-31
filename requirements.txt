@@ -30,5 +30,5 @@ transformers==4.2.2
 typing-extensions==3.7.4.3
 urllib3==1.26.3
 Werkzeug==1.0.1
-wincertstore==0.2
-https://download.pytorch.org/whl/cpu/torch-1.0.0-cp37-cp37m-linux_x86_64.whl
+https://download.pytorch.org/whl/torch_stable.html
+torch==1.6.0+cpu
